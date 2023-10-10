@@ -9,7 +9,7 @@ import pandas as pd
 def main():
     df, features, label_encoder = DF, FEATURES, LABEL_ENCODER
 
-    features = features[:10]  # Use only the means and not the variances
+    # features = features[:10]  # Use only the means and not the variances
     # Calculate average features for each genre
     average_features = variables_rescale(df[features].groupby('Genre').mean())
     average_features['Genre'] = label_encoder.classes_

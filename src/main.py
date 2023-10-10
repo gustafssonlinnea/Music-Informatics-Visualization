@@ -5,5 +5,5 @@ import chernoffface
 if __name__ == '__main__':
     # ----- Choose which program you want to run -----
     # parcoords.main()
-    # tsne.main()
-    chernoffface.main()
+    tsne.main()
+    # chernoffface.main()
