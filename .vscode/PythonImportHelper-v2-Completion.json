@@ -1,0 +1,408 @@
+[
+    {
+        "label": "*",
+        "importPath": "ChernoffFace",
+        "description": "ChernoffFace",
+        "isExtraImport": true,
+        "detail": "ChernoffFace",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.cm",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.cm",
+        "description": "matplotlib.cm",
+        "detail": "matplotlib.cm",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "constants",
+        "description": "constants",
+        "isExtraImport": true,
+        "detail": "constants",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "constants",
+        "description": "constants",
+        "isExtraImport": true,
+        "detail": "constants",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "constants",
+        "description": "constants",
+        "isExtraImport": true,
+        "detail": "constants",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "plotly.express",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "plotly.express",
+        "description": "plotly.express",
+        "detail": "plotly.express",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "data",
+        "description": "data",
+        "detail": "data",
+        "documentation": {}
+    },
+    {
+        "label": "LabelEncoder",
+        "importPath": "sklearn.preprocessing",
+        "description": "sklearn.preprocessing",
+        "isExtraImport": true,
+        "detail": "sklearn.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "LabelEncoder",
+        "importPath": "sklearn.preprocessing",
+        "description": "sklearn.preprocessing",
+        "isExtraImport": true,
+        "detail": "sklearn.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "parcoords",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "parcoords",
+        "description": "parcoords",
+        "detail": "parcoords",
+        "documentation": {}
+    },
+    {
+        "label": "load_data_from_file",
+        "importPath": "parcoords",
+        "description": "parcoords",
+        "isExtraImport": true,
+        "detail": "parcoords",
+        "documentation": {}
+    },
+    {
+        "label": "tsne",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tsne",
+        "description": "tsne",
+        "detail": "tsne",
+        "documentation": {}
+    },
+    {
+        "label": "chernoffface",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "chernoffface",
+        "description": "chernoffface",
+        "detail": "chernoffface",
+        "documentation": {}
+    },
+    {
+        "label": "plotly.graph_objects",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "plotly.graph_objects",
+        "description": "plotly.graph_objects",
+        "detail": "plotly.graph_objects",
+        "documentation": {}
+    },
+    {
+        "label": "seaborn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "seaborn",
+        "description": "seaborn",
+        "detail": "seaborn",
+        "documentation": {}
+    },
+    {
+        "label": "TSNE",
+        "importPath": "sklearn.manifold",
+        "description": "sklearn.manifold",
+        "isExtraImport": true,
+        "detail": "sklearn.manifold",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "src.chernoffface",
+        "description": "src.chernoffface",
+        "peekOfCode": "def main():\n    df, features, label_encoder = DF, FEATURES, LABEL_ENCODER\n    features = features[:10]  # Use only the means and not the variances\n    # Calculate average features for each genre\n    average_features = variables_rescale(df[features].groupby('Genre').mean())\n    average_features['Genre'] = label_encoder.classes_\n    fig = chernoff_face(data=average_features,\n                        n_columns=5,\n                        long_face=True,\n                        color_mapper=matplotlib.cm.tab20,",
+        "detail": "src.chernoffface",
+        "documentation": {}
+    },
+    {
+        "label": "FILEPATH",
+        "kind": 5,
+        "importPath": "src.constants",
+        "description": "src.constants",
+        "peekOfCode": "FILEPATH = 'data/features_30_sec.csv'\nDF, DIMENSIONS, FEATURES, LABEL_ENCODER = data.load_data_from_file(FILEPATH)\nCOLORS = px.colors.qualitative.Plotly",
+        "detail": "src.constants",
+        "documentation": {}
+    },
+    {
+        "label": "COLORS",
+        "kind": 5,
+        "importPath": "src.constants",
+        "description": "src.constants",
+        "peekOfCode": "COLORS = px.colors.qualitative.Plotly",
+        "detail": "src.constants",
+        "documentation": {}
+    },
+    {
+        "label": "load_data_from_file",
+        "kind": 2,
+        "importPath": "src.data",
+        "description": "src.data",
+        "peekOfCode": "def load_data_from_file(filepath: str, num_songs: int=None):\n    # Read the CSV file into a pandas DataFrame\n    df = pd.read_csv(filepath)\n    # Use label encoding to convert categorical labels to numerical values\n    label_encoder = LabelEncoder()\n    df['label_encoded'] = label_encoder.fit_transform(df['label'])\n    # Custom names for each column\n    custom_dimension_names = {\n        'label_encoded': 'Genre',\n        'tempo': 'Tempo',",
+        "detail": "src.data",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "src.parcoords",
+        "description": "src.parcoords",
+        "peekOfCode": "def main():   \n    # --------------- LOAD DATA ---------------         \n    df, dimensions, label_encoder = DF, DIMENSIONS, LABEL_ENCODER\n    # --------------- CREATE PLOT ---------------\n    # Create Parcoords trace\n    parcoords_trace = go.Parcoords(\n        line=dict(color=df['Genre'], colorscale=COLORS),\n        dimensions=dimensions\n    )\n    # Create the figure and add the Parcoords trace",
+        "detail": "src.parcoords",
+        "documentation": {}
+    },
+    {
+        "label": "fig",
+        "kind": 5,
+        "importPath": "src.parcoords",
+        "description": "src.parcoords",
+        "peekOfCode": "fig = px.parallel_coordinates(\n    subset_df,\n    dimensions=dimensions,\n    color=\"Genre\",\n    color_continuous_scale=px.colors.qualitative.Plotly  # Set your desired colorscale\n)\"\"\"\n\"\"\"\n# Set custom axis ticks and labels for the 'Genre' dimension\ngenre_labels = label_encoder.classes_  # Get the original genre labels\ngenre_values = label_encoder.transform(genre_labels)  # Get the corresponding encoded values",
+        "detail": "src.parcoords",
+        "documentation": {}
+    },
+    {
+        "label": "genre_labels",
+        "kind": 5,
+        "importPath": "src.parcoords",
+        "description": "src.parcoords",
+        "peekOfCode": "genre_labels = label_encoder.classes_  # Get the original genre labels\ngenre_values = label_encoder.transform(genre_labels)  # Get the corresponding encoded values\nfig = go.Figure(data=\n    go.Parcoords(\n        line = dict(color = df['Genre'],  # Assuming 'Genre_encoded' is the column representing genre\n                   colorscale = px.colors.qualitative.Plotly),  # You can specify any colorscale you prefer\n        dimensions = [dict(range = [df[dim].min(), df[dim].max()],\n                           label = dim, values = df[dim]) for dim in dimensions]\n    )\n)",
+        "detail": "src.parcoords",
+        "documentation": {}
+    },
+    {
+        "label": "genre_values",
+        "kind": 5,
+        "importPath": "src.parcoords",
+        "description": "src.parcoords",
+        "peekOfCode": "genre_values = label_encoder.transform(genre_labels)  # Get the corresponding encoded values\nfig = go.Figure(data=\n    go.Parcoords(\n        line = dict(color = df['Genre'],  # Assuming 'Genre_encoded' is the column representing genre\n                   colorscale = px.colors.qualitative.Plotly),  # You can specify any colorscale you prefer\n        dimensions = [dict(range = [df[dim].min(), df[dim].max()],\n                           label = dim, values = df[dim]) for dim in dimensions]\n    )\n)\n\"\"\"",
+        "detail": "src.parcoords",
+        "documentation": {}
+    },
+    {
+        "label": "fig",
+        "kind": 5,
+        "importPath": "src.parcoords",
+        "description": "src.parcoords",
+        "peekOfCode": "fig = go.Figure(data=\n    go.Parcoords(\n        line = dict(color = df['Genre'],  # Assuming 'Genre_encoded' is the column representing genre\n                   colorscale = px.colors.qualitative.Plotly),  # You can specify any colorscale you prefer\n        dimensions = [dict(range = [df[dim].min(), df[dim].max()],\n                           label = dim, values = df[dim]) for dim in dimensions]\n    )\n)\n\"\"\"",
+        "detail": "src.parcoords",
+        "documentation": {}
+    },
+    {
+        "label": "dimensions",
+        "kind": 5,
+        "importPath": "src.radarchart",
+        "description": "src.radarchart",
+        "peekOfCode": "dimensions = [dim for dim in dimensions if dim['label'] != 'Genre']\ngrouped_df = df.groupby('Genre')[[dim['label'] for dim in dimensions]].mean().reset_index()\n## Define different scales for each dimension\nradial_axes = []\nfor dim in dimensions:\n    axis_config = dict(\n        range=[df[dim['label']].min(), df[dim['label']].max()],  # Set the range based on the data\n        label=dim['label'],  # Use the dimension label as the axis label\n    )\n    radial_axes.append(axis_config)",
+        "detail": "src.radarchart",
+        "documentation": {}
+    },
+    {
+        "label": "grouped_df",
+        "kind": 5,
+        "importPath": "src.radarchart",
+        "description": "src.radarchart",
+        "peekOfCode": "grouped_df = df.groupby('Genre')[[dim['label'] for dim in dimensions]].mean().reset_index()\n## Define different scales for each dimension\nradial_axes = []\nfor dim in dimensions:\n    axis_config = dict(\n        range=[df[dim['label']].min(), df[dim['label']].max()],  # Set the range based on the data\n        label=dim['label'],  # Use the dimension label as the axis label\n    )\n    radial_axes.append(axis_config)\n# Create a radar chart with different scales",
+        "detail": "src.radarchart",
+        "documentation": {}
+    },
+    {
+        "label": "radial_axes",
+        "kind": 5,
+        "importPath": "src.radarchart",
+        "description": "src.radarchart",
+        "peekOfCode": "radial_axes = []\nfor dim in dimensions:\n    axis_config = dict(\n        range=[df[dim['label']].min(), df[dim['label']].max()],  # Set the range based on the data\n        label=dim['label'],  # Use the dimension label as the axis label\n    )\n    radial_axes.append(axis_config)\n# Create a radar chart with different scales\nfig = go.Figure()\nfor i, row in grouped_df.iterrows():",
+        "detail": "src.radarchart",
+        "documentation": {}
+    },
+    {
+        "label": "fig",
+        "kind": 5,
+        "importPath": "src.radarchart",
+        "description": "src.radarchart",
+        "peekOfCode": "fig = go.Figure()\nfor i, row in grouped_df.iterrows():\n    radar_values = [row[dim['label']] for dim in dimensions]\n    radar_values.append(radar_values[0])  # Close the radar chart\n    fig.add_trace(go.Scatterpolar(\n        r=radar_values,\n        theta=[dim['label'] for dim in dimensions],\n        fill='toself',\n        name=row['Genre'],  # Genre names as trace names\n    ))",
+        "detail": "src.radarchart",
+        "documentation": {}
+    },
+    {
+        "label": "ComplexRadar",
+        "kind": 6,
+        "importPath": "src.radarchart2",
+        "description": "src.radarchart2",
+        "peekOfCode": "class ComplexRadar():\n    def __init__(self, fig, variables, ranges,\n                 n_ordinate_levels=6):\n        angles = np.arange(0, 360, 360./len(variables))\n        axes = [fig.add_axes([0.1,0.1,0.9,0.9],polar=True,\n                label = \"axes{}\".format(i)) \n                for i in range(len(variables))]\n        l, text = axes[0].set_thetagrids(angles, \n                                         labels=variables)\n        [txt.set_rotation(angle-90) for txt, angle ",
+        "detail": "src.radarchart2",
+        "documentation": {}
+    },
+    {
+        "label": "variables",
+        "kind": 5,
+        "importPath": "src.radarchart2",
+        "description": "src.radarchart2",
+        "peekOfCode": "variables = (\"Normal Scale\", \"Inverted Scale\", \"Inverted 2\", \n            \"Normal Scale 2\", \"Normal 3\", \"Normal 4 %\", \"Inverted 3 %\")\ndata = (1.76, 1.1, 1.2, \n        4.4, 3.4, 86.8, 20)\nranges = [(0.1, 2.3), (1.5, 0.3), (1.3, 0.5),\n         (1.7, 4.5), (1.5, 3.7), (70, 87), (100, 10)]            \n# plotting\nfig1 = plt.figure(figsize=(6, 6))\nradar = ComplexRadar(fig1, variables, ranges)\nradar.plot(data)",
+        "detail": "src.radarchart2",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "src.radarchart2",
+        "description": "src.radarchart2",
+        "peekOfCode": "data = (1.76, 1.1, 1.2, \n        4.4, 3.4, 86.8, 20)\nranges = [(0.1, 2.3), (1.5, 0.3), (1.3, 0.5),\n         (1.7, 4.5), (1.5, 3.7), (70, 87), (100, 10)]            \n# plotting\nfig1 = plt.figure(figsize=(6, 6))\nradar = ComplexRadar(fig1, variables, ranges)\nradar.plot(data)\nradar.fill(data, alpha=0.2)\nplt.show()",
+        "detail": "src.radarchart2",
+        "documentation": {}
+    },
+    {
+        "label": "ranges",
+        "kind": 5,
+        "importPath": "src.radarchart2",
+        "description": "src.radarchart2",
+        "peekOfCode": "ranges = [(0.1, 2.3), (1.5, 0.3), (1.3, 0.5),\n         (1.7, 4.5), (1.5, 3.7), (70, 87), (100, 10)]            \n# plotting\nfig1 = plt.figure(figsize=(6, 6))\nradar = ComplexRadar(fig1, variables, ranges)\nradar.plot(data)\nradar.fill(data, alpha=0.2)\nplt.show()",
+        "detail": "src.radarchart2",
+        "documentation": {}
+    },
+    {
+        "label": "fig1",
+        "kind": 5,
+        "importPath": "src.radarchart2",
+        "description": "src.radarchart2",
+        "peekOfCode": "fig1 = plt.figure(figsize=(6, 6))\nradar = ComplexRadar(fig1, variables, ranges)\nradar.plot(data)\nradar.fill(data, alpha=0.2)\nplt.show()",
+        "detail": "src.radarchart2",
+        "documentation": {}
+    },
+    {
+        "label": "radar",
+        "kind": 5,
+        "importPath": "src.radarchart2",
+        "description": "src.radarchart2",
+        "peekOfCode": "radar = ComplexRadar(fig1, variables, ranges)\nradar.plot(data)\nradar.fill(data, alpha=0.2)\nplt.show()",
+        "detail": "src.radarchart2",
+        "documentation": {}
+    },
+    {
+        "label": "unique_genres",
+        "kind": 5,
+        "importPath": "src.scatterplotmatrix",
+        "description": "src.scatterplotmatrix",
+        "peekOfCode": "unique_genres = df['Genre'].unique()\nnum_genres = len(unique_genres)\ncolors = plt.cm.rainbow(np.linspace(0, 1, num_genres))\n# Map genre labels to color indices\ngenre_to_color = {genre: color for genre, color in zip(unique_genres, colors)}\ncolor_indices = df['Genre'].map(genre_to_color)\n\"\"\"\n# Plot the scatter matrix using the generated color indices\npd.plotting.scatter_matrix(df[features], figsize=(20, 20), grid=True, marker='o')#, c=list(color_indices))\nplt.show()",
+        "detail": "src.scatterplotmatrix",
+        "documentation": {}
+    },
+    {
+        "label": "num_genres",
+        "kind": 5,
+        "importPath": "src.scatterplotmatrix",
+        "description": "src.scatterplotmatrix",
+        "peekOfCode": "num_genres = len(unique_genres)\ncolors = plt.cm.rainbow(np.linspace(0, 1, num_genres))\n# Map genre labels to color indices\ngenre_to_color = {genre: color for genre, color in zip(unique_genres, colors)}\ncolor_indices = df['Genre'].map(genre_to_color)\n\"\"\"\n# Plot the scatter matrix using the generated color indices\npd.plotting.scatter_matrix(df[features], figsize=(20, 20), grid=True, marker='o')#, c=list(color_indices))\nplt.show()\n\"\"\"",
+        "detail": "src.scatterplotmatrix",
+        "documentation": {}
+    },
+    {
+        "label": "colors",
+        "kind": 5,
+        "importPath": "src.scatterplotmatrix",
+        "description": "src.scatterplotmatrix",
+        "peekOfCode": "colors = plt.cm.rainbow(np.linspace(0, 1, num_genres))\n# Map genre labels to color indices\ngenre_to_color = {genre: color for genre, color in zip(unique_genres, colors)}\ncolor_indices = df['Genre'].map(genre_to_color)\n\"\"\"\n# Plot the scatter matrix using the generated color indices\npd.plotting.scatter_matrix(df[features], figsize=(20, 20), grid=True, marker='o')#, c=list(color_indices))\nplt.show()\n\"\"\"\n\"\"\"",
+        "detail": "src.scatterplotmatrix",
+        "documentation": {}
+    },
+    {
+        "label": "genre_to_color",
+        "kind": 5,
+        "importPath": "src.scatterplotmatrix",
+        "description": "src.scatterplotmatrix",
+        "peekOfCode": "genre_to_color = {genre: color for genre, color in zip(unique_genres, colors)}\ncolor_indices = df['Genre'].map(genre_to_color)\n\"\"\"\n# Plot the scatter matrix using the generated color indices\npd.plotting.scatter_matrix(df[features], figsize=(20, 20), grid=True, marker='o')#, c=list(color_indices))\nplt.show()\n\"\"\"\n\"\"\"\n# Define colors for each genre\ngenre_colors = {",
+        "detail": "src.scatterplotmatrix",
+        "documentation": {}
+    },
+    {
+        "label": "color_indices",
+        "kind": 5,
+        "importPath": "src.scatterplotmatrix",
+        "description": "src.scatterplotmatrix",
+        "peekOfCode": "color_indices = df['Genre'].map(genre_to_color)\n\"\"\"\n# Plot the scatter matrix using the generated color indices\npd.plotting.scatter_matrix(df[features], figsize=(20, 20), grid=True, marker='o')#, c=list(color_indices))\nplt.show()\n\"\"\"\n\"\"\"\n# Define colors for each genre\ngenre_colors = {\n    'blues': 'blue',",
+        "detail": "src.scatterplotmatrix",
+        "documentation": {}
+    },
+    {
+        "label": "genre_colors",
+        "kind": 5,
+        "importPath": "src.scatterplotmatrix",
+        "description": "src.scatterplotmatrix",
+        "peekOfCode": "genre_colors = {\n    'blues': 'blue',\n    'classical': 'red',\n    'country': 'yellow',\n    'disco': 'purple',\n    'hip-hop': 'orange',\n    'jazz': 'cyan',\n    'metal': 'black',\n    'pop': 'pink',\n    'reggae': 'green',",
+        "detail": "src.scatterplotmatrix",
+        "documentation": {}
+    },
+    {
+        "label": "colors",
+        "kind": 5,
+        "importPath": "src.scatterplotmatrix",
+        "description": "src.scatterplotmatrix",
+        "peekOfCode": "colors = df['Genre'].map(genre_colors)\"\"\"\npd.plotting.scatter_matrix(df[features], figsize=(20,20),grid=True,\n                           marker='o')#, c=df['Genre'].map(colors))\n# Create scatterplot matrix with histograms on the diagonal using Seaborn\n#sns.set(style=\"ticks\")\n#sns.pairplot(df[columns], diag_kind=\"kde\", hue='Genre', markers='o')\nplt.show()",
+        "detail": "src.scatterplotmatrix",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "src.tsne",
+        "description": "src.tsne",
+        "peekOfCode": "def main():\n    # --------------- LOAD AND PREPARE DATA ---------------\n    df, dimensions, features, label_encoder = DF, DIMENSIONS, FEATURES, LABEL_ENCODER\n    X = df[features]\n    # --------------- APPLY T-SNE ---------------\n    # Initialize t-SNE with desired perplexity and other parameters\n    tsne = TSNE(n_components=2, perplexity=30, random_state=42)\n    # Apply t-SNE to your data\n    X_tsne = tsne.fit_transform(X)\n    # --------------- VISUALIZE USING GO ---------------",
+        "detail": "src.tsne",
+        "documentation": {}
+    }
+]
