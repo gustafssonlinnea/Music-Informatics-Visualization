@@ -9,6 +9,15 @@
         "documentation": {}
     },
     {
+        "label": "matplotlib.transforms",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.transforms",
+        "description": "matplotlib.transforms",
+        "detail": "matplotlib.transforms",
+        "documentation": {}
+    },
+    {
         "label": "matplotlib.patches",
         "kind": 6,
         "isExtraImport": true,
@@ -109,6 +118,15 @@
         "documentation": {}
     },
     {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
         "label": "pandas",
         "kind": 6,
         "isExtraImport": true,
@@ -187,6 +205,15 @@
         "documentation": {}
     },
     {
+        "label": "chernoffcat",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "chernoffcat",
+        "description": "chernoffcat",
+        "detail": "chernoffcat",
+        "documentation": {}
+    },
+    {
         "label": "plotly.graph_objects",
         "kind": 6,
         "isExtraImport": true,
@@ -215,118 +242,118 @@
     {
         "label": "map_eye_size",
         "kind": 2,
-        "importPath": "src.chernoff",
-        "description": "src.chernoff",
+        "importPath": "src.chernoffcat",
+        "description": "src.chernoffcat",
         "peekOfCode": "def map_eye_size(size):\n    min_size = 0.12\n    max_size = 0.29\n    return min_size + (max_size - min_size) * size\ndef map_eye_color(value):\n    cmap = plt.get_cmap('rainbow')\n    return cmap(value)\ndef map_nose_shape(value):\n    # Function to create a triangle for the nose\n    min_width = 0.01",
-        "detail": "src.chernoff",
+        "detail": "src.chernoffcat",
         "documentation": {}
     },
     {
         "label": "map_eye_color",
         "kind": 2,
-        "importPath": "src.chernoff",
-        "description": "src.chernoff",
-        "peekOfCode": "def map_eye_color(value):\n    cmap = plt.get_cmap('rainbow')\n    return cmap(value)\ndef map_nose_shape(value):\n    # Function to create a triangle for the nose\n    min_width = 0.01\n    max_width = 0.2\n    half_width = min_width + value * (max_width - min_width)\n    return [(0.5 - half_width, 0.4), (0.5 + half_width, 0.4), (0.5, 0.6)]\ndef map_nose_color(value):",
-        "detail": "src.chernoff",
+        "importPath": "src.chernoffcat",
+        "description": "src.chernoffcat",
+        "peekOfCode": "def map_eye_color(value):\n    cmap = plt.get_cmap('rainbow')\n    return cmap(value)\ndef map_nose_shape(value):\n    # Function to create a triangle for the nose\n    min_width = 0.01\n    max_width = 0.1\n    x_mid = 0.5\n    y_mid = 0.4\n    height = 0.05",
+        "detail": "src.chernoffcat",
         "documentation": {}
     },
     {
         "label": "map_nose_shape",
         "kind": 2,
-        "importPath": "src.chernoff",
-        "description": "src.chernoff",
-        "peekOfCode": "def map_nose_shape(value):\n    # Function to create a triangle for the nose\n    min_width = 0.01\n    max_width = 0.2\n    half_width = min_width + value * (max_width - min_width)\n    return [(0.5 - half_width, 0.4), (0.5 + half_width, 0.4), (0.5, 0.6)]\ndef map_nose_color(value):\n    cmap = plt.get_cmap('rainbow')\n    return cmap(value)\ndef map_mouth_shape(value):    ",
-        "detail": "src.chernoff",
+        "importPath": "src.chernoffcat",
+        "description": "src.chernoffcat",
+        "peekOfCode": "def map_nose_shape(value):\n    # Function to create a triangle for the nose\n    min_width = 0.01\n    max_width = 0.1\n    x_mid = 0.5\n    y_mid = 0.4\n    height = 0.05\n    half_width = min_width + value * (max_width - min_width)\n    vertices = [\n                (x_mid - half_width, y_mid + height), ",
+        "detail": "src.chernoffcat",
         "documentation": {}
     },
     {
         "label": "map_nose_color",
         "kind": 2,
-        "importPath": "src.chernoff",
-        "description": "src.chernoff",
+        "importPath": "src.chernoffcat",
+        "description": "src.chernoffcat",
         "peekOfCode": "def map_nose_color(value):\n    cmap = plt.get_cmap('rainbow')\n    return cmap(value)\ndef map_mouth_shape(value):    \n    def _smile_curve(x, a):\n        return a * x**2 + 0.3\n    a = 3 * ((value - 0.5) * 2)\n    X = np.linspace(-0.15, 0.15, 400)\n    Y = _smile_curve(X, a)\n    return X, Y",
-        "detail": "src.chernoff",
+        "detail": "src.chernoffcat",
         "documentation": {}
     },
     {
         "label": "map_mouth_shape",
         "kind": 2,
-        "importPath": "src.chernoff",
-        "description": "src.chernoff",
+        "importPath": "src.chernoffcat",
+        "description": "src.chernoffcat",
         "peekOfCode": "def map_mouth_shape(value):    \n    def _smile_curve(x, a):\n        return a * x**2 + 0.3\n    a = 3 * ((value - 0.5) * 2)\n    X = np.linspace(-0.15, 0.15, 400)\n    Y = _smile_curve(X, a)\n    return X, Y\ndef map_mouth_color(value):\n    cmap = plt.get_cmap('rainbow')\n    return cmap(value)",
-        "detail": "src.chernoff",
+        "detail": "src.chernoffcat",
         "documentation": {}
     },
     {
         "label": "map_mouth_color",
         "kind": 2,
-        "importPath": "src.chernoff",
-        "description": "src.chernoff",
+        "importPath": "src.chernoffcat",
+        "description": "src.chernoffcat",
         "peekOfCode": "def map_mouth_color(value):\n    cmap = plt.get_cmap('rainbow')\n    return cmap(value)\ndef map_face_shape(value):\n    \"\"\"# Define face dimensions\n    max_height = 0.9\n    max_width = 0.8\n    # Center of the face\n    center_x = 0.5\n    center_y = 0.5",
-        "detail": "src.chernoff",
+        "detail": "src.chernoffcat",
         "documentation": {}
     },
     {
         "label": "map_face_shape",
         "kind": 2,
-        "importPath": "src.chernoff",
-        "description": "src.chernoff",
+        "importPath": "src.chernoffcat",
+        "description": "src.chernoffcat",
         "peekOfCode": "def map_face_shape(value):\n    \"\"\"# Define face dimensions\n    max_height = 0.9\n    max_width = 0.8\n    # Center of the face\n    center_x = 0.5\n    center_y = 0.5\n    # Define vertices for the face outline\n    verts = [\n        (center_x, center_y - max_height / 2),  # mid of chin",
-        "detail": "src.chernoff",
+        "detail": "src.chernoffcat",
         "documentation": {}
     },
     {
         "label": "map_face_color",
         "kind": 2,
-        "importPath": "src.chernoff",
-        "description": "src.chernoff",
-        "peekOfCode": "def map_face_color(value):\n    cmap = plt.get_cmap('rainbow')\n    return cmap(value)\n# Function to create Chernoff face\ndef create_chernoff_face(parameters, ax, genre_name):\n    eye_size = map_eye_size(parameters['eye_size'])\n    nose_shape = map_nose_shape(parameters['nose_width'])\n    nose_color = map_nose_color(parameters['nose_color'])\n    eye_color = map_eye_color(parameters['eye_color'])\n    x, y = map_mouth_shape(parameters['mouth_smile_factor'])",
-        "detail": "src.chernoff",
+        "importPath": "src.chernoffcat",
+        "description": "src.chernoffcat",
+        "peekOfCode": "def map_face_color(value):\n    cmap = plt.get_cmap('rainbow')\n    return cmap(value)\ndef map_ear_shapes(value):\n    # Function to create a triangle for the nose\n    # min_width = 0.01\n    # max_width = 0.2\n    # half_width = min_width + value * (max_width - min_width)\n    half_width = 0.15\n    min_height = 0.08",
+        "detail": "src.chernoffcat",
+        "documentation": {}
+    },
+    {
+        "label": "map_ear_shapes",
+        "kind": 2,
+        "importPath": "src.chernoffcat",
+        "description": "src.chernoffcat",
+        "peekOfCode": "def map_ear_shapes(value):\n    # Function to create a triangle for the nose\n    # min_width = 0.01\n    # max_width = 0.2\n    # half_width = min_width + value * (max_width - min_width)\n    half_width = 0.15\n    min_height = 0.08\n    max_height = 0.23\n    half_height = min_height + value * (max_height - min_height)\n    mid_height = 0.89",
+        "detail": "src.chernoffcat",
+        "documentation": {}
+    },
+    {
+        "label": "map_whiskers",
+        "kind": 2,
+        "importPath": "src.chernoffcat",
+        "description": "src.chernoffcat",
+        "peekOfCode": "def map_whiskers(value_len, value_color, ax):\n    num_whiskers = 3\n    whisker_angle = math.pi / 4\n    min_whisker_length = 0.2\n    max_whisker_length = 0.5\n    whisker_length = min_whisker_length + value_len * (max_whisker_length - min_whisker_length)\n    cmap = plt.get_cmap('rainbow')\n    whisker_color = cmap(value_color)\n    left_center = (0.6, 0.4)\n    right_center = (0.4, 0.4)",
+        "detail": "src.chernoffcat",
+        "documentation": {}
+    },
+    {
+        "label": "map_whisker_color",
+        "kind": 2,
+        "importPath": "src.chernoffcat",
+        "description": "src.chernoffcat",
+        "peekOfCode": "def map_whisker_color(value):\n    cmap = plt.get_cmap('rainbow')\n    return cmap(value)\n# Function to create Chernoff face\ndef create_chernoff_face(parameters, ax, genre_name):\n    face_shape = map_face_shape(parameters['face_shape'])  \n    face_color = map_face_color(parameters['face_color'])\n    # whisker_length = map_whiskers(parameters['whisker_length'])\n    # whisker_color = map_whisker_color(parameters['whisker_color'])\n    eye_size = map_eye_size(parameters['eye_size'])",
+        "detail": "src.chernoffcat",
         "documentation": {}
     },
     {
         "label": "create_chernoff_face",
         "kind": 2,
-        "importPath": "src.chernoff",
-        "description": "src.chernoff",
-        "peekOfCode": "def create_chernoff_face(parameters, ax, genre_name):\n    eye_size = map_eye_size(parameters['eye_size'])\n    nose_shape = map_nose_shape(parameters['nose_width'])\n    nose_color = map_nose_color(parameters['nose_color'])\n    eye_color = map_eye_color(parameters['eye_color'])\n    x, y = map_mouth_shape(parameters['mouth_smile_factor'])\n    mouth_color = map_mouth_color(parameters['mouth_color'])\n    face_shape = map_face_shape(parameters['face_shape'])  \n    face_color = map_face_color(parameters['face_color'])   \n    # Draw face",
-        "detail": "src.chernoff",
+        "importPath": "src.chernoffcat",
+        "description": "src.chernoffcat",
+        "peekOfCode": "def create_chernoff_face(parameters, ax, genre_name):\n    face_shape = map_face_shape(parameters['face_shape'])  \n    face_color = map_face_color(parameters['face_color'])\n    # whisker_length = map_whiskers(parameters['whisker_length'])\n    # whisker_color = map_whisker_color(parameters['whisker_color'])\n    eye_size = map_eye_size(parameters['eye_size'])\n    nose_shape = map_nose_shape(parameters['nose_width'])\n    nose_color = map_nose_color(parameters['nose_color'])\n    eye_color = map_eye_color(parameters['eye_color'])\n    mouth_x, mouth_y = map_mouth_shape(parameters['mouth_smile_factor'])",
+        "detail": "src.chernoffcat",
         "documentation": {}
     },
     {
-        "label": "average_features",
-        "kind": 5,
-        "importPath": "src.chernoff",
-        "description": "src.chernoff",
-        "peekOfCode": "average_features = variables_rescale(df[features].groupby('Genre').mean())\naverage_features['Genre'] = label_encoder.classes_\n# print(average_features)\n# Create a figure and axis\nfig, ax = plt.subplots(figsize=(15, 10), nrows=2, ncols=5)\nchernoff_features = ['Chroma STFT μ', 'Chroma STFT σ²', 'RMS μ', 'RMS σ²', 'SC μ', 'SC σ²', 'Spectral BW μ', 'Spectral BW σ²']\ngenre_faces_vals = []\nfor i in range(10):  # For each genre\n    genre_face_vals = []\n    for chernoff_feature in chernoff_features:  # For each chosen feature for our Chernoff face",
-        "detail": "src.chernoff",
-        "documentation": {}
-    },
-    {
-        "label": "average_features['Genre']",
-        "kind": 5,
-        "importPath": "src.chernoff",
-        "description": "src.chernoff",
-        "peekOfCode": "average_features['Genre'] = label_encoder.classes_\n# print(average_features)\n# Create a figure and axis\nfig, ax = plt.subplots(figsize=(15, 10), nrows=2, ncols=5)\nchernoff_features = ['Chroma STFT μ', 'Chroma STFT σ²', 'RMS μ', 'RMS σ²', 'SC μ', 'SC σ²', 'Spectral BW μ', 'Spectral BW σ²']\ngenre_faces_vals = []\nfor i in range(10):  # For each genre\n    genre_face_vals = []\n    for chernoff_feature in chernoff_features:  # For each chosen feature for our Chernoff face\n        genre_face_vals.append(average_features.at[i, chernoff_feature])  # Get the value for the feature",
-        "detail": "src.chernoff",
-        "documentation": {}
-    },
-    {
-        "label": "chernoff_features",
-        "kind": 5,
-        "importPath": "src.chernoff",
-        "description": "src.chernoff",
-        "peekOfCode": "chernoff_features = ['Chroma STFT μ', 'Chroma STFT σ²', 'RMS μ', 'RMS σ²', 'SC μ', 'SC σ²', 'Spectral BW μ', 'Spectral BW σ²']\ngenre_faces_vals = []\nfor i in range(10):  # For each genre\n    genre_face_vals = []\n    for chernoff_feature in chernoff_features:  # For each chosen feature for our Chernoff face\n        genre_face_vals.append(average_features.at[i, chernoff_feature])  # Get the value for the feature\n    genre_faces_vals.append(genre_face_vals)\nfor i in range(10):\n    # Sample normalized parameters (replace with your actual parameters)\n    parameters = {",
-        "detail": "src.chernoff",
-        "documentation": {}
-    },
-    {
-        "label": "genre_faces_vals",
-        "kind": 5,
-        "importPath": "src.chernoff",
-        "description": "src.chernoff",
-        "peekOfCode": "genre_faces_vals = []\nfor i in range(10):  # For each genre\n    genre_face_vals = []\n    for chernoff_feature in chernoff_features:  # For each chosen feature for our Chernoff face\n        genre_face_vals.append(average_features.at[i, chernoff_feature])  # Get the value for the feature\n    genre_faces_vals.append(genre_face_vals)\nfor i in range(10):\n    # Sample normalized parameters (replace with your actual parameters)\n    parameters = {\n        'eye_size': genre_faces_vals[i][0],             # Chroma STFT μ",
-        "detail": "src.chernoff",
+        "label": "main",
+        "kind": 2,
+        "importPath": "src.chernoffcat",
+        "description": "src.chernoffcat",
+        "peekOfCode": "def main(): \n    df, features, label_encoder = DF, FEATURES, LABEL_ENCODER\n    # features = features[:10]  # Use only the means and not the variances\n    # Calculate average features for each genre\n    average_features = variables_rescale(df[features].groupby('Genre').mean())  # rescale to value [0, 1]\n    average_features['Genre'] = label_encoder.classes_\n    # Create a figure and axis\n    fig, ax = plt.subplots(figsize=(15, 10), nrows=2, ncols=5)\n    chernoff_features = ['Chroma STFT μ', 'Chroma STFT σ²', \n                        'RMS μ', 'RMS σ²', ",
+        "detail": "src.chernoffcat",
         "documentation": {}
     },
     {
